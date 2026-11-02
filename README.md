@@ -1,4 +1,4 @@
-# MedQ
+# IMC
 
 Веб-приложение для прохождения и создания тестов. Работает полностью в браузере, без сервера и зависимостей. Все данные хранятся в localStorage.
 
@@ -22,21 +22,21 @@
 
 Скачать репозиторий:
 
-    git clone https://github.com/unknwnmd/MedQ.git
+    git clone https://github.com/unknwnmd/IMC.git
 
 Открыть index.html в браузере.
 
-## Формат .medq
+## Формат .imx
 
-Файл .medq — бинарный контейнер:
+Файл .imx — бинарный контейнер:
 
-- первые 4 байта — сигнатура MEDQ
+- первые 4 байта — сигнатура IMX
 - далее — gzip-сжатый JSON (если браузер не поддерживает CompressionStream, пишется обычный JSON)
 
 Структура JSON:
 
     {
-      "format": "medq.questions",
+      "format": "imx.questions",
       "version": 1,
       "title": "Название теста",
       "questions": [
@@ -50,7 +50,7 @@
 
 Поля:
 
-- format — фиксированная строка "medq.questions"
+- format — фиксированная строка "imx.questions"
 - version — версия формата
 - title — название теста
 - questions[].q — текст вопроса
@@ -59,7 +59,7 @@
 
 ## Структура проекта
 
-    MedQ/
+    IMC/
     ├── index.html    # приложение (HTML + CSS + JS в одном файле)
     ├── README.md     # описание
     ├── LICENSE       # MIT
