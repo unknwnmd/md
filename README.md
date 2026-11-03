@@ -1,4 +1,4 @@
-# IMC
+# MD
 
 Веб-приложение для прохождения и создания тестов. Работает полностью в браузере, без сервера и зависимостей. Все данные хранятся в localStorage.
 
@@ -22,21 +22,21 @@
 
 Скачать репозиторий:
 
-    git clone https://github.com/unknwnmd/IMC.git
+    git clone https://github.com/unknwnmd/md.git
 
 Открыть index.html в браузере.
 
-## Формат .imx
+## Формат .mdq
 
-Файл .imx — бинарный контейнер:
+Файл .mdq — бинарный контейнер:
 
-- первые 4 байта — сигнатура IMX
+- первые 4 байта — сигнатура MDQ
 - далее — gzip-сжатый JSON (если браузер не поддерживает CompressionStream, пишется обычный JSON)
 
 Структура JSON:
 
     {
-      "format": "imx.questions",
+      "format": "mdq.questions",
       "version": 1,
       "title": "Название теста",
       "questions": [
@@ -50,7 +50,7 @@
 
 Поля:
 
-- format — фиксированная строка "imx.questions"
+- format — фиксированная строка "mdq.questions"
 - version — версия формата
 - title — название теста
 - questions[].q — текст вопроса
@@ -59,7 +59,7 @@
 
 ## Структура проекта
 
-    IMC/
+    MD/
     ├── index.html    # приложение (HTML + CSS + JS в одном файле)
     ├── README.md     # описание
     ├── LICENSE       # MIT
